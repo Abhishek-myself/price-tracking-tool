@@ -38,7 +38,7 @@ export async function GET() {
     const history = await History.find({ userEmail: session.user.email })
         .sort({ createdAt: -1 })
         .limit(5)
-        .select("_id productName price url tracking"); // Include tracking
+        .select("_id productName price url tracking slackNotify emailNotify  "); // Include tracking
 
     return NextResponse.json(history);
 }

@@ -36,7 +36,7 @@
 import type { Metadata } from "next";
 import Providers from "./components/SessionProviderWrapper";
 import "./globals.css";
-
+import { Toaster } from "react-hot-toast";
 export const metadata: Metadata = {
   title: "Price Tracker",
   description: "Track and scrape product prices",
@@ -51,6 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>{children}</Providers>
+        <Toaster position="top-right" />
       </body>
     </html>
   );

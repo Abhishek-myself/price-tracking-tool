@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { connectDB } from "@/app/lib/mongodb";
 import History from "@/app/models/History";
+import toast from "react-hot-toast";
 
 export async function DELETE(req: Request) {
     const session = await getServerSession(authOptions);

@@ -1,4 +1,3 @@
-
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
@@ -12,17 +11,20 @@ export async function PATCH(req: Request) {
             return NextResponse.json({ error: "Not authenticated" }, { status: 401 });
         }
 
-        const { id, tracking } = await req.json();
-
-        if (!id || typeof tracking !== "boolean") {
+        const { id, type, value } = await req.json();
+        if (!id || !type || typeof value !== "boolean") {
             return NextResponse.json({ error: "Invalid data" }, { status: 400 });
+        }
+
+        if (!["slackNotify", "emailNotify"].includes(type)) {
+            return NextResponse.json({ error: "Invalid notification type" }, { status: 400 });
         }
 
         await connectDB();
 
         const updated = await History.findOneAndUpdate(
             { _id: id, userEmail: session.user.email },
-            { tracking },
+            { [type]: value },
             { new: true }
         );
 
@@ -30,9 +32,12 @@ export async function PATCH(req: Request) {
             return NextResponse.json({ error: "Product not found" }, { status: 404 });
         }
 
-        return NextResponse.json({ success: true, tracking: updated.tracking });
+        return NextResponse.json({ success: true, [type]: updated[type] });
     } catch (err) {
-        console.error("Toggle tracking error:", err);
-        return NextResponse.json({ error: "Failed to update tracking" }, { status: 500 });
+        console.error("Toggle notification error:", err);
+        return NextResponse.json({ error: "Failed to update notification" }, { status: 500 });
     }
 }
+
+
+

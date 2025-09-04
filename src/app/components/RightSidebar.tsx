@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
+import Link from "next/link";
+import { SlGraph } from "react-icons/sl";
 interface Update {
   productName: string;
   oldPrice: string;
@@ -36,7 +38,44 @@ export default function RightSidebar() {
 
   return (
     <aside className="w-80 bg-gradient-to-t from-white to-blue-50 border-transparent shadow-lg p-4 overflow-y-auto">
-      <h2 className="font-bold text-lg mb-4">📊 Price Updates</h2>
+      <div className="flex   border-b  mb-10">
+        {/* Amazon Icon */}
+        <Link
+          href="https://www.amazon.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/amazon-icon.png" // Add an amazon icon in public folder
+            alt="Amazon"
+            width={60}
+            height={60}
+            className="cursor-pointer hover:scale-110 transition-transform"
+          />
+        </Link>
+
+        {/* Flipkart Icon */}
+        <Link
+          href="https://www.flipkart.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/flipkart-icon.png" // Add a flipkart icon in public folder
+            alt="Flipkart"
+            width={60}
+            height={60}
+            className="cursor-pointer hover:scale-110 transition-transform"
+          />
+        </Link>
+      </div>
+
+      {/* <h2 className="font-bold text-lg mb-4"> Price Updates</h2> */}
+      <h2 className="font-bold text-lg mb-4 flex items-center gap-2">
+        <SlGraph className="text-blue-500 text-xl" />
+        Price Updates
+      </h2>
+
       {updates.length === 0 ? (
         <p className="text-gray-500">No price changes detected</p>
       ) : (

@@ -7,6 +7,8 @@ import { FaUserCircle } from "react-icons/fa";
 // import SearchHistory from "../components/SearchHistory";
 import RightSidebar from "../components/RightSidebar";
 import SearchHistory from "../components/SearchHistory";
+import Image from "next/image";
+import Link from "next/link";
 
 interface SearchItem {
   _id: string;
@@ -137,12 +139,23 @@ export default function ScraperPage() {
   if (!session) {
     return (
       <main className="min-h-screen flex items-center justify-center px-4 bg-black relative">
+        <Link href="/scraper" className="absolute top-4 left-4 z-50">
+          <Image
+            src="/logo2.png"
+            alt="Logo"
+            width={80}
+            height={80}
+            className="rounded-full object-cover cursor-pointer hover:scale-105 transition-transform"
+          />
+        </Link>
         {/*  Blue gradient in top-left corner */}
+
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.6),_transparent_40%)]"></div>
 
         <div className="w-full max-w-xl bg-transparent rounded-lg shadow-lg p-8 relative z-10">
-          <h1 className="text-5xl font-bold text-center mb-6 bg-gradient-to-r from-blue-700 to-green-500 bg-clip-text text-transparent">
-            Product Price Scraper
+          <h1 className="text-5xl font-bold text-center mb-6 bg-gradient-to-r from-blue-700 to-green-500 bg-clip-text text-transparent mr-10">
+            {/* Product Price Scraper */}
+            EiceTrack
           </h1>
 
           <input
@@ -208,7 +221,8 @@ export default function ScraperPage() {
             Product Price Scraper
           </h1> */}
           <h1 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-blue-700 to-green-500 bg-clip-text text-transparent">
-            Product Price Scraper
+            {/* Product Price Scraper */}
+            EiceTrack
           </h1>
           <ProductForm onScrapeSuccess={handleScrapeSuccess} />
         </div>
