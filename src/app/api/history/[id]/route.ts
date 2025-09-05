@@ -13,6 +13,7 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
 
     if (type === "slack") history.slackNotify = !history.slackNotify;
     if (type === "email") history.emailNotify = !history.emailNotify;
+    if (type === "telegram") history.telegramNotify = !history.telegramNotify;
 
     await history.save();
     return NextResponse.json({ success: true });

@@ -57,7 +57,7 @@ export interface History extends Document {
     lastNotifiedPrice?: string;
     slackNotify?: boolean;
     emailNotify?: boolean;
-    telegramChatId?: string
+    // telegramChatId?: string
     telegramNotify?: boolean;
 
 }
@@ -73,7 +73,7 @@ const HistorySchema = new Schema<History>({
     slackNotify: { type: Boolean, default: false }, // NEW
     emailNotify: { type: Boolean, default: false },
     telegramNotify: { type: Boolean, default: false },
-    telegramChatId: { type: String, default: null },
+    // telegramChatId: { type: String, default: null },
 
 });
 

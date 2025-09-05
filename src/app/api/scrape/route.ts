@@ -49,7 +49,18 @@
 // }
 
 
-// src/app/api/scrape/route.ts
+
+
+
+
+
+
+
+
+
+
+
+
 import { NextRequest, NextResponse } from 'next/server';
 import { connectDB } from '@/app/lib/mongodb';
 import Product from '@/app/models/Product';
@@ -70,7 +81,7 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: 'URL is not valid' }, { status: 400 });
         }
 
-        // ✅ Only lowercase for checking
+
         const domainCheck = url.toLowerCase();
         const isAmazon = domainCheck.includes("amazon.");
         const isFlipkart = domainCheck.includes("flipkart.");
@@ -81,10 +92,10 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // ✅ Connect to DB
+
         await connectDB();
 
-        // 🔹 Pass original URL to scraper
+
         const result = await scrapePrice(url);
 
         if (!result) {

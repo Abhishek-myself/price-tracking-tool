@@ -46,7 +46,7 @@ export default function RightSidebar() {
           rel="noopener noreferrer"
         >
           <Image
-            src="/amazon-icon.png" // Add an amazon icon in public folder
+            src="/amazon-icon.png"
             alt="Amazon"
             width={60}
             height={60}
@@ -61,7 +61,7 @@ export default function RightSidebar() {
           rel="noopener noreferrer"
         >
           <Image
-            src="/flipkart-icon.png" // Add a flipkart icon in public folder
+            src="/flipkart-icon.png"
             alt="Flipkart"
             width={60}
             height={60}
@@ -70,7 +70,6 @@ export default function RightSidebar() {
         </Link>
       </div>
 
-      {/* <h2 className="font-bold text-lg mb-4"> Price Updates</h2> */}
       <h2 className="font-bold text-lg mb-4 flex items-center gap-2">
         <SlGraph className="text-blue-500 text-xl" />
         Price Updates

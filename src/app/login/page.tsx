@@ -129,7 +129,7 @@ export default function LoginPage() {
       {/* Left Side - Image Section */}
       <div className="hidden md:flex w-1/2 bg-gradient-to-r from-blue-500 to-green-400 items-center justify-center">
         <Image
-          src="/track.png" // <-- place your uploaded image in /public as login-graphic.png
+          src="/track.png"
           alt="Login Illustration"
           width={400}
           height={400}
