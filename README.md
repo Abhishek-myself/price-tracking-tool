@@ -120,5 +120,5 @@ npx localtunnel --port 3000
  ```
 4. Set your Telegram webhook (replace <telegram_token> and <local_tunnel_url>):
 ```
-"https://api.telegram.org/bot<telegram_token>/setWebhook?url=<local_tunnel_url/api/telegram/webhook"
+https://api.telegram.org/bot<telegram_token>/setWebhook?url=<local_tunnel_url/api/telegram/webhook
 ```
