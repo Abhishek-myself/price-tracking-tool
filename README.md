@@ -1,117 +1,119 @@
-Price Tracking Tool
+# EiceTrack 🚀
 
-A modern web app to track product prices across e-commerce platforms like Amazon and Flipkart, and receive real-time alerts via Email, Slack, and Telegram.
+EiceTrack is a smart price tracking application that helps users monitor product prices on Amazon & Flipkart and receive instant notifications when prices drop.
 
+It’s designed for seamless tracking and real-time alerts via multiple channels including Slack, Email, and Telegram.
 
+## Screenshots:
+<img width="1919" height="898" alt="Screenshot 2025-09-09 152632" src="https://github.com/user-attachments/assets/9dc55cc3-6b40-414e-8954-715865ebecb4" />
+<img width="1917" height="904" alt="Screenshot 2025-09-09 152704" src="https://github.com/user-attachments/assets/866e680c-d409-42fe-a5a5-0e3115fbe003" />
 
-Screenshots:
-<img width="1919" height="894" alt="Screenshot 2025-09-05 142904" src="https://github.com/user-attachments/assets/faec63d3-3680-4cf6-beb1-36eeda766cfb" />
+<img width="1914" height="908" alt="Screenshot 2025-09-09 153219" src="https://github.com/user-attachments/assets/6761435e-25d8-4153-8210-e52004f624a1" />
+<img width="1917" height="902" alt="Screenshot 2025-09-09 153130" src="https://github.com/user-attachments/assets/cd2d8842-9390-4ccb-9b1c-e1eac67d65a1" />
 
-<img width="1918" height="904" alt="Screenshot 2025-09-05 142950" src="https://github.com/user-attachments/assets/1276acca-9342-4592-a6ba-9f355b1e225b" />
+<img width="1919" height="909" alt="Screenshot 2025-09-09 152551" src="https://github.com/user-attachments/assets/d269a420-6865-4d99-a2b7-37f4358fceaa" />
+<img width="1916" height="912" alt="Screenshot 2025-09-09 152522" src="https://github.com/user-attachments/assets/7d2dd5f1-4c57-413b-afe8-108f861b5e23" />
 
-<img width="1919" height="907" alt="Screenshot 2025-09-05 143018" src="https://github.com/user-attachments/assets/b850821d-5cc4-4bba-855f-a1f92fafb128" />
-
-<img width="1919" height="907" alt="Screenshot 2025-09-05 143541" src="https://github.com/user-attachments/assets/92ebccbf-9df5-4ae5-949e-5be6fcc150d0" />
-
-<img width="1912" height="896" alt="Screenshot 2025-09-05 145030" src="https://github.com/user-attachments/assets/d460630d-3ae2-4ee3-b883-4033795cafad" />
-
-
-
+<br><br>
 
 
+**📖 Description**
 
-📝 Guide
+EiceTrack is a **smart price tracker application** that helps users monitor product prices on Amazon & Flipkart and receive instant notifications when prices drop. The app is designed for seamless tracking and real-time alerts via multiple channels including Slack, Email, and Telegram.
 
-1.Open the tool
+**🔎 How it works**
 
-2.Create a user account (Sign up/Login)
+1. **Account Setup:**  
+   - Users must create an account or log in to access the app.
+   
+2. **Enter Product URL:**  
+   - Once logged in, users can enter an Amazon or Flipkart product URL.
+   - The app fetches the product name and current price automatically.
+   
+3. **Search History:**  
+   - Every tracked product (URL, name, and price) is saved in the **search history** for easy access.  
 
-3.Enter an Amazon or Flipkart product URL → The tool will fetch and display the product name & price.
+4. **Enable Tracking:**  
+   - Users can enable tracking for any product in their history.  
+   - Once tracking is enabled, the app monitors the product price continuously.
 
-4.The product will be stored in the Search History (only the last 5 searches are saved).
+5. **Notification Alerts:**  
+   - Users can enable **Slack, Email, or Telegram notifications**.  
+   - Whenever a **price drop** occurs, alerts are instantly sent to the chosen channels.
 
-5.To track price drops, enable the Track button. Once tracking is enabled, you can also activate:
-
-Slack notifications
-
-Email (Gmail) notifications
-
-Telegram notifications
-
-6.You can disable tracking/notifications anytime from the same panel.
-
-7.At the bottom of the Search History, you’ll see a User icon → click it to access the Logout button
-
-
-| Layer         | Technologies                                      |
-| ------------- | ------------------------------------------------- |
-| Frontend      | Next.js , Tailwind CSS                            |
-| Backend       | Next.js API Routes, Node.js                       |
-| Database      | MongoDB                                           |
-| Auth          | NextAuth.js                                       |
-| Scraping      | Puppeteer / Playwright                            |
-| Notifications | Email, Slack, Telegram Bot API                    |
-| Tunneling     | LocalTunnel / Ngrok for development webhook setup |
+EiceTrack simplifies online shopping by ensuring you never miss a price drop on your favorite products. With a user-friendly interface, quick product fetching, and customizable notifications, staying updated on deals has never been easier!
 
 
+## Getting Started
+### ✅ Prerequisites
+
+Make sure you have the following installed before running the project:
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) as the package manager
+- [MongoDB](https://www.mongodb.com/) (local or Atlas cluster for database)
+- [Next.js](https://nextjs.org/) (for frontend and API routes)
+- [Tailwind CSS](https://tailwindcss.com/) (for styling)
+- [NextAuth.js](https://next-auth.js.org/) (for authentication with email/password & Google)
+- [Playwright](https://playwright.dev/) (for scraping product details)
+- [Slack API](https://api.slack.com/) (for Slack notifications)
+- [Telegram Bot API](https://core.telegram.org/bots/api) (for Telegram notifications)
+- [Nodemailer](https://nodemailer.com/) (for email notifications)
 
 
+### 🛠️ Installing
 
+Follow these steps to set up the project locally:
 
-
-Setup:
-
-
-Install dependencies:
-
+### Clone the repository
+```bash
+git clone https://github.com/your-username/price-tracker-app.git
+```
+```
+cd price-tracker-app
+```
+### Install dependencies
+```bash
 npm install
 
+```
+### Set up environment variables
+Create a .env.local file in the root of the project and add the following variables:
+```
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+EMAIL_FROM=your_email_address
+EMAIL_APP_PASS=your_email_app_password
+SLACK_WEBHOOK_URL=your_slack_webhook
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_BOT_USERNAME=your_telegram_bot_username
 
+```
 
-
-Make sure to create a .env.local file in the root of your project and add the following:
-
-MONGODB_URI → Your MongoDB connection string
-
-NEXTAUTH_SECRET → A secret string for NextAuth 
-
-NEXTAUTH_URL → Your deployed site URL (e.g., http://localhost:3000 or production URL)
-
-GOOGLE_CLIENT_ID → Google OAuth client ID
-
-GOOGLE_CLIENT_SECRET → Google OAuth client secret
-
-SLACK_WEBHOOK_URL → Your Slack webhook URL for sending notifications
-
-TELEGRAM_BOT_TOKEN → Telegram bot token from BotFather
-
-TELEGRAM_BOT_USERNAME → Your bot’s username (without @)
-
-EMAIL_APP_PASS → App Password for your email (not your normal login password, required if using Gmail)
-
-EMAIL_FROM → The email address used to send notifications (e.g., notifications@yourdomain.com)
-
-
-
-
-
-
-
-
-
-
-Start your dev server:
-
+### Run the development server
+```
 npm run dev
-
-
-In a separate terminal, run:
-
+```
+Now open the app in your browser:
+```
+http://localhost:3000
+```
+### 🤖 Telegram Integration
+To enable Telegram notifications:
+1. Run LocalTunnel in a separate terminal:
+```
 npx localtunnel --port 3000
+```
+2. Copy the generated public URL.
 
-
-Copy the generated *.loca.lt URL.
-
-Set the Telegram webhook:
-
-curl -X POST "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=<TUNNEL_URL>/api/telegram/webhook"
+3. Retrieve your LocalTunnel password:
+```
+ https://loca.lt/mytunnelpassword
+ ```
+4. Set your Telegram webhook (replace <telegram_token> and <local_tunnel_url>):
+```
+"https://api.telegram.org/bot<telegram_token>/setWebhook?url=<local_tunnel_url/api/telegram/webhook"
+```
