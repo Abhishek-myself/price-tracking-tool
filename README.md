@@ -6,12 +6,17 @@ It’s designed for seamless tracking and real-time alerts via multiple channels
 
 ## Screenshots:
 <img width="1919" height="898" alt="Screenshot 2025-09-09 152632" src="https://github.com/user-attachments/assets/9dc55cc3-6b40-414e-8954-715865ebecb4" />
+<br><br>
 <img width="1917" height="904" alt="Screenshot 2025-09-09 152704" src="https://github.com/user-attachments/assets/866e680c-d409-42fe-a5a5-0e3115fbe003" />
+<br><br>
 
 <img width="1914" height="908" alt="Screenshot 2025-09-09 153219" src="https://github.com/user-attachments/assets/6761435e-25d8-4153-8210-e52004f624a1" />
+<br><br>
 <img width="1917" height="902" alt="Screenshot 2025-09-09 153130" src="https://github.com/user-attachments/assets/cd2d8842-9390-4ccb-9b1c-e1eac67d65a1" />
+<br><br>
 
 <img width="1919" height="909" alt="Screenshot 2025-09-09 152551" src="https://github.com/user-attachments/assets/d269a420-6865-4d99-a2b7-37f4358fceaa" />
+<br><br>
 <img width="1916" height="912" alt="Screenshot 2025-09-09 152522" src="https://github.com/user-attachments/assets/7d2dd5f1-4c57-413b-afe8-108f861b5e23" />
 
 <br><br>
