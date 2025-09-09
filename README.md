@@ -72,7 +72,7 @@ Follow these steps to set up the project locally:
 
 ### Clone the repository
 ```bash
-git clone https://github.com/your-username/price-tracker-app.git
+git clone https://github.com/Abhishek-myself/price-tracking-tool
 ```
 ```
 cd price-tracker-app
