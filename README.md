@@ -75,7 +75,7 @@ Follow these steps to set up the project locally:
 git clone https://github.com/Abhishek-myself/price-tracking-tool
 ```
 ```
-cd price-tracker-app
+cd price-tracking-tool
 ```
 ### Install dependencies
 ```bash
