@@ -22,7 +22,7 @@ It’s designed for seamless tracking and real-time alerts via multiple channels
 <br><br>
 
 
-**📖 Description**
+### 📖 Description
 
 EiceTrack is a **smart price tracker application** that helps users monitor product prices on Amazon & Flipkart and receive instant notifications when prices drop. The app is designed for seamless tracking and real-time alerts via multiple channels including Slack, Email, and Telegram.
 
